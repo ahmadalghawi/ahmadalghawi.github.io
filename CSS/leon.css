@@ -1,0 +1,226 @@
+/* start Global Rules */
+:root{
+--main-color:#10cab7;
+
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: 'Work Sans', sans-serif;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/* End Rules */
+/* Start Components */
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -5px;
+    margin: 0;
+
+
+    
+}
+.special-heading + p {
+    text-align: center;
+    color: #797979;
+    margin: -30px 0 0 0;
+}
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+    .special-heading + p {
+        margin-top: -20px;
+    }
+}
+/* End Components */
+
+/* start Headers */
+
+.header{
+    padding: 20px;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    width: 60px;
+}
+.header .links{
+    position: relative;
+}
+.header .links:hover .icons span:nth-child(2){
+width: 100%;
+
+}
+.header .links .icons {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header .links .icons span {
+    background-color: #333;
+    margin-bottom: 5px;
+    height: 3px;
+}
+.header .links .icons span:first-child{
+    
+    width: 100px;
+}
+.header .links .icons span:nth-child(2){
+    
+    width: 60%;
+    transition: 0.3s;
+}
+.header .links .icons span:last-child{
+    width: 100%;
+}
+/* End Headers */
+.header .links ul::before {
+    content:"" ;
+    position: absolute;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    border-width: 10px;
+    content: "";
+    right: 5px;
+    top: -20px;
+
+
+}
+.header .links ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    background-color: #f6f6f6;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+/* disply ul */
+.header .links:hover ul {
+    display: block;
+}
+.header .links ul li a {
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #333;
+
+}
+/* #last {
+    border-bottom:none ;
+} */
+.header .links ul li a:hover{
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{
+    border-bottom:1px solid #ddd;
+    
+}
+/* start Landing CSS */
+.landing{
+background-image:url(../Images/landing.jpg);
+background-size: cover;
+height:calc(100vh - 60px);
+position: relative;
+
+
+}
+.landing .intro-text {
+
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50% , -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+.landing .intro-text h1{
+    margin: 0px;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.landing .intro-text p{
+    
+    font-size: 19px;
+    line-height: 1.8;
+    
+}
+/* End landing */
+/* start futures */
+.futures {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #f6f6f6;
+}
+.futures .container {
+
+display: grid;
+grid-template-columns: repeat(auto-fill,minmax(300px ,1fr)) ;
+grid-gap: 10px;
+}
+.futures .feat {
+    padding: 10px;
+    text-align: center;
+}
+.futures .feat i {
+    color:var(--main-color);
+    font-size: 40px;
+}
+.futures .feat h3 {
+    font-weight: 800;
+    margin: 30px 0 ;
+}
+.futures .feat p {
+    color: #777;
+    line-height: 1.8;
+    font-size: 17px;
+}
+/* Start Services */
+.services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* End Services */
